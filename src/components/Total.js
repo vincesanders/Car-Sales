@@ -1,20 +1,15 @@
 import React from 'react';
 
-import { connect } from 'react-redux';
-
-const mapStateToProps = state => {
-  return {
-    additionalPrice: state.additionalPrice,
-    price: state.car.price
-  }
-}
+import { useSelector } from 'react-redux';
 
 const Total = props => {
+
+  const totalAmount = useSelector(state => state.car.price + state.additionalPrice);
   return (
     <div className="content">
-      <h4>Total Amount: ${props.price + props.additionalPrice}</h4>
+      <h4>Total Amount: ${totalAmount}</h4>
     </div>
   );
 };
 
-export default connect(mapStateToProps, {})(Total);
+export default Total;
