@@ -18,14 +18,6 @@ const mapStateToProps = state => {
 
 const App = props => {
 
-  // const removeFeature = item => {
-  //   // dispatch an action here to remove an item
-  // };
-
-  // const addFeature = item => {
-  //   // dipsatch an action here to add an item
-  // };
-
   return (
     <div className="boxes">
       <div className="box">
